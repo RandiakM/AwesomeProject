@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  Dimensions,
   StyleSheet,
   View,
   SafeAreaView,
@@ -8,7 +9,14 @@ import {
 } from "react-native";
 
 export default function App() {
-  return <SafeAreaView style={styles.container}></SafeAreaView>;
+  console.log(Dimensions.get("screen"));
+  return (
+    <SafeAreaView style={styles.container}>
+      <View
+        style={{ backgroundColor: "dodgerblue", width: "50%", height: 70 }}
+      ></View>
+    </SafeAreaView>
+  );
 }
 
 const styles = StyleSheet.create({
