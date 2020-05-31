@@ -7,13 +7,14 @@ import {
   StatusBar,
   Platform,
 } from "react-native";
+import { useDimensions } from "@react-native-community/hooks";
 
 export default function App() {
-  console.log(Dimensions.get("screen"));
+  console.log(useDimensions());
   return (
     <SafeAreaView style={styles.container}>
       <View
-        style={{ backgroundColor: "dodgerblue", width: "50%", height: 70 }}
+        style={{ backgroundColor: "dodgerblue", width: "100%", height: "30%" }}
       ></View>
     </SafeAreaView>
   );
